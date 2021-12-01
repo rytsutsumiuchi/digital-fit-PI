@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context=".features.profile.ProfileFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSair"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="@dimen/horizontal_margin_default"
+        android:layout_marginBottom="@dimen/vertical_margin_between_contents"
+        android:backgroundTint="@color/gray"
+        android:drawableLeft="@drawable/sair"
+        android:text="Sair"
+        android:textStyle="bold"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeText5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    </com.google.android.material.button.MaterialButton>
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="@dimen/horizontal_margin_default"
+        android:text="Boas Vindas"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWelcomeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin_default"
+        android:text="Bem vindo à Digital Fit!"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvWelcomeText2"/>
+
+    <TextView
+        android:id="@+id/tvWelcomeText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin_default"
+        android:text="Esse app foi feito para ajudá-lo a organizar sua rotina de exercícios físicos!"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvWelcomeText3"/>
+
+    <TextView
+        android:id="@+id/tvWelcomeText3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin_default"
+        android:text="Monte treinos a partir de uma grande lista de exercícios!"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeText2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvWelcomeText4"/>
+
+    <TextView
+        android:id="@+id/tvWelcomeText4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin_default"
+        android:layout_marginBottom="32dp"
+        android:text="Você também pode conferir algumas informações sobre cada um dos exercicios na tela de detalhes!"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeText3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/viewLine"/>
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="@dimen/horizontal_margin_default"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeText4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvWelcomeText5"/>
+
+    <TextView
+        android:id="@+id/tvWelcomeText5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/horizontal_margin_default"
+        android:layout_marginTop="32dp"
+        android:text="Caso precise sair é só clicar aqui. Mas volte logo, estaremos esperando!"
+        android:textSize="18sp"
+        android:textColor="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/viewLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonSair"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

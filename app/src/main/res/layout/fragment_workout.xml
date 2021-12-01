@@ -1,0 +1,101 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_background"
+        tools:context=".features.workout.view.WorkoutFragment">
+
+        <TextView
+            android:id="@+id/tvWorkout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/horizontal_margin_default"
+            android:layout_marginTop="@dimen/vertical_margin_default"
+            android:layout_marginEnd="@dimen/horizontal_margin_default"
+            android:text="@string/workout"
+            android:textColor="@color/white"
+            android:textSize="@dimen/primary_title_default"
+            app:layout_constraintBottom_toTopOf="@id/search_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0" />
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_margin_between_contents"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/tvWorkout"
+            app:layout_constraintStart_toStartOf="@id/tvWorkout"
+            app:layout_constraintTop_toBottomOf="@id/tvWorkout" />
+
+        <TextView
+            android:id="@+id/tvFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_margin_default"
+            android:text="@string/workout_list"
+            android:textColor="@color/white"
+            android:textSize="@dimen/secondary_title_default"
+            app:layout_constraintBottom_toTopOf="@id/vgWorkoutRecyclerView"
+            app:layout_constraintEnd_toEndOf="@id/search_bar"
+            app:layout_constraintStart_toStartOf="@id/search_bar"
+            app:layout_constraintTop_toBottomOf="@id/search_bar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vgWorkoutRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/margin_default"
+            android:clipToPadding="false"
+            android:paddingBottom="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFilter" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:tint="@null"
+            android:src="@drawable/clipboard_add_icon"
+            app:borderWidth="0dp"
+            android:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:maxImageSize="32dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

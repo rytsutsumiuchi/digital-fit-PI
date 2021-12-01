@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:labelVisibilityMode = "labeled"
+    app:startDestination="@id/navigation_profile">
+
+    <fragment
+        android:id="@+id/navigation_workout"
+        android:name="com.example.digitalfit.features.workout.view.WorkoutFragment"
+        android:label="Treinos"
+        tools:layout="@layout/fragment_workout" >
+        <action
+            android:id="@+id/action_workoutFragment_to_workoutCreateDialog"
+            app:destination="@id/workoutCreateDialog" />
+        <action
+            android:id="@+id/action_navigation_workout_to_workoutDetailFragment"
+            app:destination="@id/workoutDetailFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/workoutCreateDialog"
+        android:name="com.example.digitalfit.features.workoutdialog.view.WorkoutCreateDialog"
+        android:label="WorkoutCreateDialog"
+        tools:layout="@layout/dialog_workout_create" >
+        <argument
+            android:name="itemId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/navigation_exercises"
+        android:name="com.example.digitalfit.features.exercises.view.ExercisesFragment"
+        android:label="@string/exercises"
+        tools:layout="@layout/fragment_exercises" >
+        <action
+            android:id="@+id/action_navigation_exercises_to_exerciseDetailFragment"
+            app:destination="@id/exerciseDetailFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.digitalfit.features.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_splashActivity"
+            app:destination="@id/splashActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/exerciseDetailFragment"
+        android:name="com.example.digitalfit.features.exercisedetail.view.ExerciseDetailFragment"
+        android:label="fragment_exercise_detail"
+        tools:layout="@layout/fragment_exercise_detail" >
+        <argument
+            android:name="exerciseId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="com.example.digitalfit.features.login.SplashActivity"
+        android:label="activity_splash"
+        tools:layout="@layout/activity_splash" />
+    <fragment
+        android:id="@+id/workoutDetailFragment"
+        android:name="com.example.digitalfit.features.workoutdetail.view.WorkoutDetailFragment"
+        android:label="WorkoutDetailFragment" >
+        <argument
+            android:name="itemId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+        <action
+            android:id="@+id/action_workoutDetailFragment_to_exerciseDetailFragment"
+            app:destination="@id/exerciseDetailFragment" />
+        <action
+            android:id="@+id/action_workoutDetailFragment_to_workoutAddExerciseFragment"
+            app:destination="@id/workoutAddExerciseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workoutAddExerciseFragment"
+        android:name="com.example.digitalfit.features.workoutaddexercise.view.WorkoutAddExerciseFragment"
+        android:label="WorkoutAddExerciseFragment" >
+        <action
+            android:id="@+id/action_workoutAddExerciseFragment_to_exerciseDetailFragment"
+            app:destination="@id/exerciseDetailFragment" />
+        <argument
+            android:name="itemId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+    </fragment>
+
+
+</navigation>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    android:fillViewport="true"
+    tools:context=".features.exercisedetail.view.ExerciseDetailFragment">
+
+
+    <ImageButton
+        android:id="@+id/ibBackIcon"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_marginStart="@dimen/horizontal_margin_default"
+        android:layout_marginTop="@dimen/vertical_margin_between_contents"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_baseline_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivExerciseImage"
+        android:layout_width="228dp"
+        android:layout_height="197dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        tools:src="@drawable/addexercicio" />
+
+
+    <TextView
+        android:id="@+id/tvExerciseName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/exercise_name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/primary_title_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivExerciseImage" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExerciseName">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/horizontal_margin_default"
+                android:layout_marginTop="@dimen/vertical_margin_between_contents"
+                android:text="@string/description"
+                android:textColor="@color/white"
+                android:textSize="@dimen/secondary_title_default"
+                app:layout_constraintBottom_toTopOf="@id/tvDescriptionValue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDescriptionValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_margin_default"
+                android:text="@string/description_value"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_default"
+                app:layout_constraintBottom_toTopOf="@id/tvPrimaryMuscle"
+                app:layout_constraintEnd_toEndOf="@id/tvDescription"
+                app:layout_constraintStart_toStartOf="@id/tvDescription"
+                app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+            <TextView
+                android:id="@+id/tvPrimaryMuscle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_margin_between_contents"
+                android:text="@string/primary_muscle"
+                android:textColor="@color/white"
+                android:textSize="@dimen/secondary_title_default"
+                app:layout_constraintBottom_toTopOf="@id/tvPrimaryMuscleValue"
+                app:layout_constraintEnd_toEndOf="@id/tvDescription"
+                app:layout_constraintStart_toStartOf="@id/tvDescription"
+                app:layout_constraintTop_toBottomOf="@id/tvDescriptionValue" />
+
+            <TextView
+                android:id="@+id/tvPrimaryMuscleValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_margin_default"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_default"
+                app:layout_constraintBottom_toTopOf="@id/tvSecondaryMuscle"
+                app:layout_constraintEnd_toEndOf="@id/tvDescription"
+                app:layout_constraintStart_toStartOf="@id/tvDescription"
+                app:layout_constraintTop_toBottomOf="@id/tvPrimaryMuscle"
+                tools:text="@string/muscle_list" />
+
+            <TextView
+                android:id="@+id/tvSecondaryMuscle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_margin_between_contents"
+                android:text="@string/secondary_muscle"
+                android:textColor="@color/white"
+                android:textSize="@dimen/secondary_title_default"
+                app:layout_constraintBottom_toTopOf="@+id/tvSecondaryMuscleValue"
+                app:layout_constraintEnd_toEndOf="@id/tvDescription"
+                app:layout_constraintStart_toStartOf="@id/tvDescription"
+                app:layout_constraintTop_toBottomOf="@id/tvPrimaryMuscleValue" />
+
+            <TextView
+                android:id="@+id/tvSecondaryMuscleValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_margin_default"
+                android:layout_marginBottom="@dimen/vertical_margin_between_contents"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_default"
+                app:layout_constraintBottom_toTopOf="@id/btShare"
+                app:layout_constraintEnd_toEndOf="@id/tvDescription"
+                app:layout_constraintStart_toStartOf="@id/tvDescription"
+                app:layout_constraintTop_toBottomOf="@id/tvSecondaryMuscle"
+                tools:text="@string/muscle_list" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btShare"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_margin="@dimen/margin_default"
+                android:backgroundTint="@color/aqua_button"
+                android:paddingHorizontal="30dp"
+                android:text="@string/share"
+                app:icon="@drawable/ic_baseline_share_white_24"
+                app:cornerRadius="@dimen/cornerRadius"
+                app:layout_constraintTop_toBottomOf="@id/tvSecondaryMuscleValue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

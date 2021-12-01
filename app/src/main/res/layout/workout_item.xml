@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_default">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvWorkout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Treino de Braços I"
+            android:textStyle="bold"
+            android:textSize="@dimen/title_card"
+            android:layout_marginStart="@dimen/horizontal_margin_default"
+            android:layout_marginEnd="@dimen/horizontal_margin_default"
+            android:layout_marginTop="@dimen/vertical_margin_default"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ibDeleteWorkout"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvWorkoutDescription"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            tools:text="Essa é uma descrição de treino."
+            android:textStyle="normal"
+            android:textSize="@dimen/text_card"
+            android:layout_marginHorizontal="@dimen/horizontal_margin_default"
+            android:layout_marginVertical="@dimen/vertical_margin_default"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintTop_toBottomOf="@id/tvWorkout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ibDeleteWorkout"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ibDeleteWorkout"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_marginTop="@dimen/vertical_margin_default"
+            android:layout_marginEnd="@dimen/horizontal_margin_default"
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvWorkout"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_baseline_close_black_24" />
+
+        <ImageView
+            android:id="@+id/ibEditWorkout"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_marginVertical="@dimen/vertical_margin_default"
+            android:layout_marginEnd="@dimen/horizontal_margin_default"
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/ibDeleteWorkout"
+            app:layout_constraintTop_toBottomOf="@id/ibDeleteWorkout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/ic_baseline_edit_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
